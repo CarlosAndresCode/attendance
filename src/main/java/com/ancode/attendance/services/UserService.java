@@ -2,6 +2,7 @@ package com.ancode.attendance.services;
 
 import com.ancode.attendance.emun.Role;
 import com.ancode.attendance.entities.User;
+import com.ancode.attendance.helpers.EncryptPassword;
 import com.ancode.attendance.repositories.UserRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class UserService {
             user = new User();
             user.setName("Admin");
             user.setEmail("email@email.com");
-            user.setPassword("password");
+            user.setPassword(EncryptPassword.encrypt("password")); // Use the encryption helper
             user.setRole(Role.ADMIN);
 
             userRepository.save(user);
