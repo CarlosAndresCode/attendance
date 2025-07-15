@@ -1,5 +1,6 @@
 package com.ancode.attendance.entities;
 
+import com.ancode.attendance.dtos.UserDto;
 import com.ancode.attendance.emun.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,5 +24,15 @@ public class User {
     private String password;
 
     private Role role;
+
+    public UserDto getToDto() {
+        UserDto userDto = new UserDto();
+        userDto.setId(this.id);
+        userDto.setName(this.name);
+        userDto.setEmail(this.email);
+        userDto.setPassword(this.password);
+        userDto.setRole(this.role);
+        return userDto;
+    }
 
 }

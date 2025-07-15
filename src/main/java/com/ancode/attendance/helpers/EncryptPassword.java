@@ -23,4 +23,8 @@ public class EncryptPassword {
             throw new RuntimeException("Error al encriptar la contraseña", e);
         }
     }
+
+    public static boolean checkPassword(String password, String passwordHash) {
+        return passwordHash.equals(encrypt(password));
+    }
 }
