@@ -1,21 +1,19 @@
-package com.ancode.attendance.services;
+package com.ancode.attendance.auth.service;
 
-import com.ancode.attendance.dtos.LoginRequestDto;
-import com.ancode.attendance.dtos.UserDto;
-import com.ancode.attendance.emun.Role;
-import com.ancode.attendance.entities.User;
-import com.ancode.attendance.helpers.EncryptPassword;
-import com.ancode.attendance.repositories.UserRepository;
+import com.ancode.attendance.auth.dto.LoginRequestDto;
+import com.ancode.attendance.auth.dto.UserResponseDto;
+import com.ancode.attendance.auth.emun.Role;
+import com.ancode.attendance.auth.entity.User;
+import com.ancode.attendance.auth.helpers.EncryptPassword;
+import com.ancode.attendance.auth.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLOutput;
-import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class AuthService {
 
     @Autowired
     private UserRepository userRepository;
@@ -40,7 +38,7 @@ public class UserService {
         }
     }
 
-    public UserDto login(LoginRequestDto loginRequest) {
+    public UserResponseDto login(LoginRequestDto loginRequest) {
         if (loginRequest.getEmail().isEmpty() || loginRequest.getPassword().isEmpty()) {
             throw new RuntimeException("Email and password must not be null");
         }

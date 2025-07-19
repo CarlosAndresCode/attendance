@@ -1,4 +1,4 @@
-package com.ancode.attendance.helpers;
+package com.ancode.attendance.auth.helpers;
 
 import org.springframework.stereotype.Component;
 

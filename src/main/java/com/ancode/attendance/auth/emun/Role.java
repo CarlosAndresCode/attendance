@@ -1,4 +1,4 @@
-package com.ancode.attendance.emun;
+package com.ancode.attendance.auth.emun;
 
 public enum Role {
     ADMIN,

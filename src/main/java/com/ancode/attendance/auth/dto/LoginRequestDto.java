@@ -1,4 +1,4 @@
-package com.ancode.attendance.dtos;
+package com.ancode.attendance.auth.dto;
 
 import lombok.Data;
 

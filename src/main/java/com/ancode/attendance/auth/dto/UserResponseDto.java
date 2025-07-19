@@ -1,10 +1,10 @@
-package com.ancode.attendance.dtos;
+package com.ancode.attendance.auth.dto;
 
-import com.ancode.attendance.emun.Role;
+import com.ancode.attendance.auth.emun.Role;
 import lombok.Data;
 
 @Data
-public class UserDto {
+public class UserResponseDto {
 
     private Long id;
 

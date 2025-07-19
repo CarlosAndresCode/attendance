@@ -1,7 +1,7 @@
-package com.ancode.attendance.repositories;
+package com.ancode.attendance.auth.repository;
 
-import com.ancode.attendance.emun.Role;
-import com.ancode.attendance.entities.User;
+import com.ancode.attendance.auth.emun.Role;
+import com.ancode.attendance.auth.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
